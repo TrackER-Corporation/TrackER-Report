@@ -4,3 +4,5 @@ remote_theme: pmarsceill/just-the-docs
 color_scheme: dark
 
 url: https://tracker-corporation.github.io/TrackER-Report/
+plugins:
+  - jekyll-default-layout
