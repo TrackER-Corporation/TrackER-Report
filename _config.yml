@@ -1,4 +1,7 @@
 title: "TrackER Documentation"
-remote_theme: pmarsceill/just-the-docs
-color_scheme: "light"
-search_enabled: true
+theme: just-the-docs
+color_scheme: "dark"
+search_enabled: false
+plugins:
+  - jekyll-default-layout
+

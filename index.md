@@ -29,7 +29,7 @@ Il server originale è nato come un unico blocco con tutti i servizi al suo inte
 L'applicazione permette agli utenti di interagire con tutto il sistema, partendo dalla gestione del proprio profilo, la visualizzazione degli edifici e dei consumi, la modifica dei servizi.
 
 <div align="center">
-<img src="img/Tracker Logo.png" alt="TrackER Logo"  width="220px" height="210px">
+<img src="img/Logo.png" alt="TrackER Logo"  width="220px" height="210px">
 <p align="center">TrackER Logo</p>
 </div>
 
