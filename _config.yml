@@ -1,6 +1,6 @@
 title: "TrackER Documentation"
 theme: just-the-docs
-color_scheme: foo
+color_scheme: custom
 search_enabled: true
 plugins:
   - jekyll-default-layout
