@@ -91,5 +91,43 @@ diagramma dei casi d’uso del building owner" >
 </div>
 
 ## Domain storytelling
+Dopo aver sviluppato i diagrammi dei casi d'uso, il team di sviluppo ha programmato una seconda intervista con gli abitanti di un condominio, appartenente al committente, per raccogliere ulteriori informazioni sul dominio e le dinamiche coinvolte nel sistema.
+
+Durante questa seconda intervista, è stata adottata la strategia del domain storytelling. Gli esperti del dominio, che in questo caso sono gli abitanti del condominio, sono stati invitati a raccontare come verificano i consumi della propria abitazione e quali aspettative e risultati si aspettano dal sistema proposto. Nel frattempo, il team di sviluppo ha registrato attentamente il racconto degli esperti utilizzando un linguaggio pittografico.
+
+Di seguito viene presentato il risultato di questa seconda intervista, in cui ogni user story è stata illustrata attraverso le domande poste dall'analista agli abitanti e un apposito diagramma utilizzando un linguaggio pittografico.
+
+
+<span style="color: #2332f9">**Analista**</span>: Attualmente come verificate i vostri consumi energetici?
+
+<span style="color: #00C5A3">**Esperto(condomino-1)**</span>: Attualmente verifico i consumi elettrici tramite posta. Ogni due mesi controllo i consumi a posteriori.
+<span style="color: #00C5A3">**Esperto(condomino-2)**</span>: Verifico mensilmente il livello di consumo dal contatore dell'acqua. Scomoda come operazione perchè abitando al terzo piano, devo recarmi fuori nel viale dove risiede il pozzetto con il contatore dell'acqua.
+<span style="color: #00C5A3">**Esperto(condomino-3)**</span>: Attualmente non mi occupo di visionare questi dati ma pago le bollette.
+
+
+<span style="color: #2332f9">**Analista**</span>: Se esistesse un'applicazione in grado di visionare questi dati in tempo reale, come vorreste accedervi?
+
+<span style="color: #00C5A3">**Esperto(condomino-1)**</span>: Lavorando in ufficio mi piacerebbe poter visionare i dati dal computer.
+<span style="color: #00C5A3">**Esperto(condomino-2)**</span>: Spesso effettuo viaggi d'affari e mi sarebbe comodo controllare il tutto dal mio telefono.
+<span style="color: #00C5A3">**Esperto(condomino-3)**</span>: Adoro le applicazioni, mi piacerebbe averla ovunque.
+
+
+
+
+
+<span style="color: #2332f9">**Analista**</span>: Come vorreste che funzionasse il sistema? Come vorreste che fosse organizzata nelle diverse schermate?
+
+<span style="color: #00C5A3">**Esperto(condomino-1)**</span>: Mi piacerebbe che fosse molto intuitiva e che i dati balzassero subito all'occhio. Vorrei anche essere in grado di visionare i dati più nel dettaglio.
+<span style="color: #00C5A3">**Esperto(condomino-2)**</span>: Divisa in sezioni semplici in grado di visionare i dati d'interesse il più velocemente possibile. 
+<span style="color: #00C5A3">**Esperto(condomino-3)**</span>: Mi piacerebbe avere degli avatar utente. 
+
+<span style="color: #2332f9">**Analista**</span>: Per più nel dettaglio cosa intende?
+
+<span style="color: #00C5A3">**Esperto(condomino-1)**</span>: Aver la possibilità di visionare i vari consumi in categorie settimanali, mensili e annuali.
+
+
+
+
 
 ## Mockup
+
