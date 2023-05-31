@@ -9,6 +9,13 @@ nav_order: 3
 
 Durante le varie sessioni di consultazione con gli esperti del dominio, il team di sviluppo ha dedicato tempo ed energie alla ricerca dei termini che costituiscono l’ubiquitous language, emersi durante gli incontri.
 
+Di seguito è possibile vedere un’immagine raffigurante i diversi termini individuati e le relazioni che vi sono fra di essi.
+
+<div align="center">
+<img src="img/language.png" alt="Ubiquitous language" >
+<p align="center" id="fig3">Ubiquitous language</p>
+</div>
+
 | Termine | Definizione |
 | --- | --- |
 |TrackER|Combinazione dei termini "track" (tracciare) e "EnergyResources" (risorse energetiche). Applicazione che monitora e traccia le risorse energetiche|
