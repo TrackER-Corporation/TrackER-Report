@@ -56,7 +56,40 @@ Infine è possibile visualizare la somma dei consumi filtrando per settimana, pe
 
 <span style="color: #00C5A3">**Esperto**</span>: Certamente.
 
-# Diagrammi dei casi d'uso
-# Domain storytelling
-# Casi d'uso
-# Mockup
+
+## Diagrammi dei casi d’uso
+
+Dalle fasi precedenti dell'analisi, sono state identificati i seguenti casi d'uso principali:
+
+Il seguente caso d'uso è relativo alla registrazione e accesso utente al sistema.
+Gli attori in questo caso sono gli User che possono essere del tipo Building Owner o Vendor.
+Entrambi possono registrarsi nel sistema tramite mail e password. Effettuato il login, questi potranno modificare i dati personali, aggiornare password e preferenze o eliminare l'account.
+
+<div align="center">
+<img src="img/usersCase.png" alt="
+diagramma dei casi d’uso per il login degli utenti" >
+<p align="center" id="fig1">Diagramma dei casi d’uso: login utenti</p>
+</div>
+
+Il seguente caso d'uso è relativo alla gestione dell'account Vendor, che è anche l'unico attore.
+La prima volta è necessario registrarare la propria organizzazione, andando a completare tutti i campi con le informazioni necessarie. Successivamente sarà possibile fare il login e gestire gli utenti, le tariffe, le risorse e l'organizzazione.
+
+<div align="center">
+<img src="img/vendorCase.png" alt="
+diagramma dei casi d’uso del vendor" >
+<p align="center" id="fig2">Diagramma dei casi d’uso: vendor</p>
+</div>
+
+Il seguente caso d'uso è relativo alla gestione dell'account Building Owner, che è anche l'unico attore.
+La prima volta è necessario registrararsi, andando a completare tutti i campi con le informazioni necessarie. Successivamente sarà possibile fare il login e gestire i propri edifici, visualizzare i propri consumi e gestire le fonti rinnovabili.
+
+
+<div align="center">
+<img src="img/customerCase.png" alt="
+diagramma dei casi d’uso del building owner" >
+<p align="center" id="fig3">Diagramma dei casi d’uso: building owner</p>
+</div>
+
+## Domain storytelling
+
+## Mockup
