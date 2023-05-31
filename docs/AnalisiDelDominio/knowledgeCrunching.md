@@ -132,10 +132,59 @@ Di seguito viene presentato il risultato di questa seconda intervista, in cui og
 <p align="center" id="fig3">Domain story telling: applicazione web</p>
 </div>
 
-
-
-
-
-
 ## Mockup
 
+A seguito delle interviste effettuate e grazie alle informazioni finora raccolte, il team di sviluppo ha prodotto i seguenti mock-up relativi all’applicazione web richiesta dal committente. Tali mock-up sono stati presentati e discussi assieme agli esperti del domino, in modo da poter verificare la loro correttezza e in caso modificarli per meglio adattarli alle loro richieste.
+
+**Sign In / Sign Up**
+
+Per la form di Sign In / Sign Up all’applicazione si è pensato di suddividere l’accesso e la registrazione all’applicazione in una singola schermata per non disperdere
+l’utente nelle varie pagine del sistema. La registrazione richiederà il tipo di utente che si vuole creare (Vendor o Buildings Owner) mentre per accedere al sistema sarà necessario effettuare il Sign In tramite Mail e Password. Per passare da un form all'altro è possibile usare uno slider orizzontale.
+
+<div align="center">
+<img src="img/signin.png" alt="Sign in mockup" >
+<p align="center" id="fig3">Mock-up Sign In e Sign Up</p>
+</div>
+
+
+**Personal Account**
+
+Per la pagina Account si è pensato di creare due sezioni:
+- Una con un menù di navigazione sulle varie iterazioni che l’utente può fare con il suo account(parte sinistra);
+- Una inerente alla renderizzazione dei dati provenienti dalla sezione precedente(parte destra).
+La differenza sostanziale tra le due tipologie di account per questa pagina sarà inerente alla personalizzazione dell’avatar in cui, un Vendor, potrà caricare il logo della sua organizzazione mentre un Buildings Owner potrà selezionare un avatar presente nel sistema.
+
+<div align="center">
+<img src="img/personal.png" alt="Personal account mockup" >
+<p align="center" id="fig3">Mock-up Personal Account</p>
+</div>
+
+
+**Vendor Dashboard**
+
+La Vendor DashBoard avrà come obiettivo principale quello di dare una visione generale sui costi e guadagni di un Vendor. Questa pagina sarà composta da grafici inerenti ai consumi utente, un collegamento veloce agli edifici utente e una vasta gamma di KPI.
+
+<div align="center">
+<img src="img/vendorDashboard.png" alt="Vendor Dashboard" >
+<p align="center" id="fig3">Mock-up Vendor Dashboard</p>
+</div>
+
+
+**Building Owner Dashboard**
+
+La Buildings Owner DashBoard sarà molto simile alla Vendor DashBoard ma il suo obiettivo principale sarà quello di dare una visione generale sui consumi e risparmi energetici di un Buildings Owner. Questa pagina avrà meno KPI rispetto a quella vendor ma conterrà più grafici inerenti ai consumi.
+
+<div align="center">
+<img src="img/customerDashboard.png" alt="Building Owner Dashboard" >
+<p align="center" id="fig3">Mock-up Building Owner Dashboard</p>
+</div>
+
+
+**Building Page**
+
+La Buildings Page sarà composta da più interfacce che rappresentano un singolo edificio. Ogni edifico mostrerà la propria ubicazione tramite una mappa, le sue informazioni principali e i suoi costi totali. Si permetterà inoltre ad un utente di poter cercare i propri edifici tramite nome edificio e indirizzo edificio.
+
+<div align="center">
+<img src="img/buildings.png" alt="Buildings Page" >
+<p align="center" id="fig3">Mock-up Buildings Page</p>
+</div>
