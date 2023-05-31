@@ -55,3 +55,8 @@ Infine è possibile visualizare la somma dei consumi filtrando per settimana, pe
 <span style="color: #2332f9">**Analista**</span>: Per il momento è tutto, se ha altre domande o richieste non esiti a contattarci.
 
 <span style="color: #00C5A3">**Esperto**</span>: Certamente.
+
+# Diagrammi dei casi d'uso
+# Domain storytelling
+# Casi d'uso
+# Mockup
