@@ -6,7 +6,7 @@ nav_order: 7
 
 # Design
 
-Le componenti del sistema che si vuole andare a realizzare sono tre: il sistema di backend e le due diverse tipologie di clients: Desktop e Mobile.
+Le componenti del sistema che si vuole andare a realizzare sono due: il sistema backend e quello frontend che include il client Desktop e Mobile.
 
 Per realizzare il sistema di backend, si è deciso di adottare un'architettura a microservizi. Sono stati individuati otto microservizi principali:
 
@@ -22,9 +22,13 @@ Per realizzare il sistema di backend, si è deciso di adottare un'architettura a
 Possiamo inoltre notare che:
 
 - Ogni microservizio è connesso allo stesso database, diviso in sezioni (una per ogni servizio);
-- C'è un gateway che si occupa di collegare l'app a tutti i vari servizi, implicando che tutte le comunicazione che partono dal client o devono arrivare il client passano dal Gateway.
+- C'è un gateway che si occupa di collegare l'app a tutti i vari servizi, implicando che tutte le comunicazione che partono dal client o devono arrivare al client passano dal Gateway.
 
 <div align="center">
 <img src="img/DB.png" alt="architettura server" id="fig1">
  <p align="center">Architettura server</p>
 </div>
+
+Per quanto riguarda il frontend del sistema, si è utilizzato React, un framework JavaScript ampiamente utilizzato per la creazione di interfacce utente reattive e riutilizzabili.
+React consente di strutturare l'applicazione utilizzando un'architettura basata sui componenti.
+I componenti sono autonomi e riutilizzabili, il che favorisce la modularità e la manutenibilità del codice.
