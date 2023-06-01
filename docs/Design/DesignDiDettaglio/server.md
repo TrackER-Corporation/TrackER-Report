@@ -27,8 +27,29 @@ I diversi micro-servizi realizzati hanno tutti caratteristiche simili, ossia:
 
 In base a quanto detto in precedenza, è possibile dedurre che un micro-servizio possa svolgere sia il ruolo di **server**, ovvero accettare le richieste provenienti da altri micro-servizi in esecuzione, sia il ruolo di **client**, ovvero inviare richieste ad altri micro-servizi con cui comunica al fine di completare le proprie attività.
 
-## Tactical design
-Per la realizzazione della componente di backend, sono state seguite le linee guida del tactical design, cercando quindi di individuare tra i concetti del dominio quali avessero il ruolo di entità, value objects o domain service.
-
-
 ## Interazione tra i diversi micro-servizi
+
+I diversi micro-servizi, per poter svolgere le loro funzioni, hanno la necessità di comunicare e interagire tra loro. In dettaglio l’interazione coinvolge il Client, Desktop o Mobile. In questo caso le interazioni che possono avvenire da e verso il client, passano tutte per il servizio Gateway. Nel caso delle richieste effettuate dal Client verso il sistema di backend, il servizio può comunicare con uno dei micro-servizi, qualora fosse interessato a reperire le informazioni relative a quel particolare micro-servizio.
+
+<div align="center">
+<img src="img/architettura.png" alt="architettura micro servizi" id="fig1">
+ <p align="center">Interazione dei micro-servizi</p>
+</div>
+
+
+Di seguito viene mostrato il comportamento del server nel caso in cui un utente qualsiasi effettui il login. Nell’esempio in questione i servizi coinvolti sono:
+- `Activity`, si occupa di registrare ogni accesso al sito, l'ora e la posizione (Per entrambe le tipologie di utenti);
+- `Bills`, si occupa di memorizzare tutti consumi elettrici, di gas e di acqua relaivi a un particolare edificio;
+- `Buildings`, si occupa di registrareogni tipologia di edificio, il proprietario e tutti i vari parametri;
+- `Gateway`, si occupa di smistare le comunicazioni ai diversi microservizi;
+- `Organization`, si occupa della gestione delle singole organizzazioni, i prezzi dei vari servizi e tutti i dettagli;
+- `Preferences`, si occupa di salvare le preferenze degli utenti come ad esempio l'avatar del profilo;
+- `Users`, si occupa di registrare ogni utente, i suoi dati e la sua tipologia.
+
+Come si può vedere dal diagramma, quando un utente effettua il login, se le credenziali sono sbagliate verrà mostrato un errore; al contrario se sono corrette il client andrà a richiedere tutti i dati necessari. Prima di tutto recupera le preferenze dell'utente, poi regista l'attività di accesso, richiede le bills per poter mostrare i dati e i grafici e infine recupera la lista degli edifici dell'utente così come l'organizzazione legata a ciascun immobile.
+
+
+<div align="center">
+<img src="img/sequence.png" alt="diagramma sequenza server" id="fig1">
+ <p align="center">Diagramma di sequenza del server</p>
+</div>
