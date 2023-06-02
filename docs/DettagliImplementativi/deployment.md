@@ -1,6 +1,6 @@
 ---
-title: Testing
-parent: Deployment
+title: Deployment
+parent: Dettagli implementativi
 has_children: false
 nav_order: 5
 ---
