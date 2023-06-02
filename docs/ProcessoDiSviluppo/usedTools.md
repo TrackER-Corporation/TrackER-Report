@@ -20,39 +20,12 @@ Per il nostro progetto abbiamo utilizzato: GitHub come servizio di hosting per i
 <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="200" alt="icona github" id="fig1">
 </div>
 
-### React
+### Renovate 
 
-[React](https://react.dev/) è una libreria JavaScript per la creazione di interfacce utente. È progettata per sviluppare applicazioni web interattive, consentendo agli sviluppatori di costruire componenti riutilizzabili che si aggiornano in modo efficiente in base ai cambiamenti dei dati. React utilizza un approccio basato su componenti e un modello di programmazione dichiarativo, semplificando lo sviluppo e la gestione dello stato dell'applicazione. Grazie al suo approccio al virtual DOM, React ottimizza le prestazioni dell'applicazione, consentendo una user experience fluida e reattiva. È ampiamente utilizzato e supportato da una vasta comunità di sviluppatori.
-
-<div align="center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png" width="200" alt="icona react" id="fig2">
-</div>
-
-### Vite
-
-Il framework [Vite](https://vitejs.dev/guide/) si basa su diversi principi fondamentali per garantire prestazioni elevate e un'esperienza di sviluppo fluida. In particolare, utilizza i moduli ES nativi e le moderne API del browser per compilare il codice "on the fly" e garantire tempi di build rapidi e aggiornamenti istantanei nel browser. Inoltre, il server di sviluppo integrato in Vite è ottimizzato per il reloading rapido e la sostituzione dei moduli senza fermare l'esecuzione, consentendo agli sviluppatori di vedere in tempo reale le modifiche apportate al codice senza dover aggiornare l'intera pagina.
-
-Vite implementa anche il caricamento "lazy" dei moduli, consentendo di migliorare le prestazioni dell'applicazione, soprattutto per quelle di grandi dimensioni, e di garantire un caricamento iniziale più rapido per gli utenti. Inoltre, utilizza tecniche come il "tree-shaking" e il "code splitting" per rimuovere il codice inutilizzato dall'applicazione e dividere il codice in sezioni più piccole, migliorando ulteriormente le prestazioni.
+[Renovate](https://docs.renovatebot.com/) è un popolare strumento di automazione per il controllo delle dipendenze dei progetti software. È progettato per semplificare il processo di aggiornamento delle dipendenze del codice, come librerie, framework e plugin, mantenendo i progetti aggiornati con le ultime versioni disponibili.
 
 <div align="center">
-<img src="https://vitejs.dev/logo-with-shadow.png" width="200" alt="icona vite" id="fig3">
-</div>
-
-
-### Vitest
-
-Per il progetto si è deciso di utilizzare il framework [Vitest](https://vitest.dev/) per la realizzazione di test automatizzati sul codice che ha permesso di implementare tutti i vari test necessari per garantire la qualità del codice e analizzare la coverage del progetto, con la possibilità di eseguire i test su browser tramite un'interfaccia grafica.
-
-<div align="center">
-<img src="https://vitest.dev/logo-shadow.svg" width="200" alt="icona vitest" id="fig4">
-</div>
-
-### Ant Design
-
-[Ant Design](https://ant.design/) è una libreria di componenti UI (User Interface) reattivi e moderni per lo sviluppo di applicazioni web. Offre un'ampia gamma di componenti predefiniti, che vanno dai componenti di base come pulsanti, campi di input e tabelle, a componenti più complessi come menu, modali, grafici e molto altro. Questi componenti sono progettati con una forte attenzione all'usabilità, all'accessibilità e alla coerenza visiva, fornendo una solida base per la creazione di interfacce utente attraenti e funzionali.
-
-<div align="center">
-<img src="https://static-00.iconduck.com/assets.00/ant-design-icon-512x512-ncocfg8e.png" width="200" alt="icona Ant Design" id="fig5">
+<img src="https://docs.renovatebot.com/assets/images/logo.png" width="200" alt="icona github" id="fig1">
 </div>
 
 ### MongoDB
