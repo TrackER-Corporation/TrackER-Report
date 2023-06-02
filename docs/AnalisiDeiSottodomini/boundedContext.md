@@ -132,4 +132,8 @@ Per comprendere meglio cosa ci rappresentano i diversi bounded context e le comu
 | Outbound communication | Invia i dati relativi alle operazioni eseguite dall'utente tramite Gestione Client e Gestione operazioni |
 
 ## Context map
+Sulla base di quello che è stato descritto nei paragrafi precedenti, è stata creata una context map per rappresentare le relazioni tra i vari bounded context.
 
+<div align="center">
+<img src="img/context-map.png" alt="Context-map">
+</div>
