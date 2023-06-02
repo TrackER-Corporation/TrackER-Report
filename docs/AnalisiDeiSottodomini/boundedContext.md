@@ -43,7 +43,7 @@ Per comprendere meglio cosa ci rappresentano i diversi bounded context e le comu
 | Decisione di business | Aggiunta o aggiornamento dei sistemi esistenti; Riduzione spreco di energia |
 | Ruolo nel dominio | Gestisce la vendita e visualizzazione dei dati delle risorse energetiche |
 | Classificazione strategica | Rientra nel core domain di Web Application |
-| Ubiquitous language |  |
+| Ubiquitous language | `Water` `Gas` `Energy` `Renewable`  |
 | Inbound communication | Riceve i dati e le invoices dai relativi microservizi |
 | Outbound communication | Invia i dati relativi alle risorse energetiche a Gestione Client |
 
@@ -53,7 +53,7 @@ Per comprendere meglio cosa ci rappresentano i diversi bounded context e le comu
 | Decisione di business | / |
 | Ruolo nel dominio | Si occupa di mantenere la coerenza e la persistenza delle operazioni effettuate dai client |
 | Classificazione strategica | Rientra nel core domain di Web Application |
-| Ubiquitous language |  |
+| Ubiquitous language |  `Marketplace` `Vendors` `Building Owner` `Earnings` `Organization` `Bills` `Production` `Buildings` `Invoices` `Water` `Gas` `Energy` `Renewable` `KPI` |
 | Inbound communication | Riceve dai relativi microservizi le informazioni relative ai clients |
 | Outbound communication | Invia al database le informazioni relative ai nuovi utenti o alle modifiche di users; Invia i dati al Client |
 
@@ -63,7 +63,7 @@ Per comprendere meglio cosa ci rappresentano i diversi bounded context e le comu
 | Decisione di business | / |
 | Ruolo nel dominio | Permette di gestire le operazioni di interazione tra l'utente e l'applicazioni, come ad esempio la registrazioni di un muovo edificio o la modifica dei parametri di uno già registrato |
 | Classificazione strategica | Rientra nel core domain di Web Application |
-| Ubiquitous language |  |
+| Ubiquitous language | `Marketplace` `Vendors` `Building Owner` `Earnings` `Organization` `Bills` `Production` `Buildings` `Invoices` `Water` `Gas` `Energy` `Renewable` `KPI` |
 | Inbound communication | Riceve le richieste dal generic sub-domains Client |
 | Outbound communication | Invia i dettagli delle informazioni al database per tenere la persistenza delle modifiche |
 
@@ -75,7 +75,7 @@ Per comprendere meglio cosa ci rappresentano i diversi bounded context e le comu
 | Decisioni di business | / |
 | Ruolo nel dominio | Si occupa di pulire i dati e visualizzarli per l'utente  |
 | Classificazione strategica | Rientra nel support domain sistema di System Management |
-| Ubiquitous language |  |
+| Ubiquitous language | `Earnings` `Bills` `Production` `Buildings` `Invoices` `Water` `Gas` `Energy` `Renewable` `KPI` |
 | Inbound communication | Riceve i dati da Gestione risorse energetiche |
 | Outbound communication | Invia i dati elaborati a Gestione Client |
 
@@ -85,7 +85,7 @@ Per comprendere meglio cosa ci rappresentano i diversi bounded context e le comu
 | Decisioni di business | / |
 | Ruolo nel dominio | Si occupa di calcolare il costo totale in base al prezzo dell'organizzazione, alla quantità di energia utilizzata e alla produzione rinnovabile |
 | Classificazione strategica | Rientra nel support domain sistema di System Management |
-| Ubiquitous language |  |
+| Ubiquitous language | `Earnings` `Bills` `Production` `Buildings` `Invoices` `Water` `Gas` `Energy` `KPI`  |
 | Inbound communication | Riceve i dati da Gestione risorse energetiche, gestione risorse rinnovabili e gestione tariffe |
 | Outbound communication | Invia i dati elaborati a Gestione Client  |
 
@@ -95,7 +95,7 @@ Per comprendere meglio cosa ci rappresentano i diversi bounded context e le comu
 | Decisioni di business | / |
 | Ruolo nel dominio | Si occupa di memorizzare e di aggiornare le varie informazioni sulla tariffe e sui servizi offerti da una organizzazione |
 | Classificazione strategica | Rientra nel support domain sistema di System Management |
-| Ubiquitous language |  |
+| Ubiquitous language | `Marketplace` `Vendors` `Building Owner` `Earnings` `Organization` `Bills`  `Invoices` `KPI` |
 | Inbound communication | Riceve le informazioni da memorizzare da Gestione operazione |
 | Outbound communication | Invia i dati al Client e alla Gestione incassi |
 
@@ -105,7 +105,7 @@ Per comprendere meglio cosa ci rappresentano i diversi bounded context e le comu
 | Decisioni di business | / |
 | Ruolo nel dominio | Si occupa di memorizzare e mostrare i vari dispositivi rinnovabili e il loro costo |
 | Classificazione strategica | Rientra nel support domain sistema di System Management |
-| Ubiquitous language |  |
+| Ubiquitous language | `Marketplace` `Vendors` `Building Owner` `Organization` `Bills` `Production``Renewable` `KPI`|
 | Inbound communication | Riceve le informazioni da memorizzare da Gestione operazioni |
 | Outbound communication | Invia i dati al Client e alla Gestione incassi |
 
@@ -117,7 +117,7 @@ Per comprendere meglio cosa ci rappresentano i diversi bounded context e le comu
 | Decisioni di business | L’interfaccia deve essere user friendly e intuitiva per dell’utente |
 | Ruolo nel dominio | Si occupa di permettere all'utente di creare una organizzazione con la quale poter vendere i suoi servizi |
 | Classificazione strategica | Rientra nel generic domain client |
-| Ubiquitous language | Bills, Production, KPI, Energy, Gas, Water, Invoices, Buildings, Organization, Earnings, Building Owner, Vendor |
+| Ubiquitous language | `Marketplace` `Vendors` `Building Owner` `Earnings` `Organization` `Bills` `Production` `Buildings` `Invoices` `Water` `Gas` `Energy` `Renewable` `KPI` |
 | Inbound communication | Riceve i dati da mostrare all’utente dal bounded context Gestione Client |
 | Outbound communication | Invia i dati relativi alle informazioni dell'organizzazioni e dei consumi tramite Gestione delle tariffe, Gestione degli incassi e Gestione delle rinnovabili |
 
@@ -127,7 +127,7 @@ Per comprendere meglio cosa ci rappresentano i diversi bounded context e le comu
 | Decisioni di business | L’interfaccia deve essere user friendly e intuitiva per dell’utente |
 | Ruolo nel dominio | Si occupa di permettere all'utente di creare un account con il quale poter usufruire dei servizi dell'applicazione  |
 | Classificazione strategica | Rientra nel generic domain client |
-| Ubiquitous language | Bills, Production, KPI, Energy, Gas, Water, Invoices, Buildings, Organization, Earnings, Building Owner, Vendor |
+| Ubiquitous language | `Marketplace` `Vendors` `Building Owner` `Earnings` `Organization` `Bills` `Production` `Buildings` `Invoices` `Water` `Gas` `Energy` `Renewable` `KPI` |
 | Inbound communication | Riceve i dati da mostrare all’utente dal bounded context Gestione Client |
 | Outbound communication | Invia i dati relativi alle operazioni eseguite dall'utente tramite Gestione Client e Gestione operazioni |
 
