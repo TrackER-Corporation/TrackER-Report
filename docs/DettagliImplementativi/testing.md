@@ -24,9 +24,9 @@ Si è cercato di testare la maggior parte dei componenti in tutti i microservizi
 
 Di seguito verrà rappresentata la coverage per ogni singolo servizio:
 
-#### Activity
+#### Microservices coverage
 
-Servizio| Stmts | Branch | Funcs | Lines |
+|Servizio| Stmts | Branch | Funcs | Lines |
 | :---: | :---: | :---: | :---: | :---: |
 |Activity| <span style="color:#3c9d17">97.02</span> | <span style="color:#3c9d17">88.23</span> | <span style="color:#3c9d17">100 | <span style="color:#3c9d17">97.02</span> |
 |Bills| <span style="color:#f4bd01">65.15</span> | <span style="color:#3c9d17">87.5</span> | <span style="color:#3c9d17">87.5 | <span style="color:#f4bd01">65.15</span> |
