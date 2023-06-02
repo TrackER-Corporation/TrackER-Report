@@ -29,3 +29,59 @@ Infine, il server Express viene avviato sulla porta specificata e viene visualiz
 
 ## Microservices
 
+## Docker e docker Compose
+
+Al fine di rendere il deployment del sistema di backend più semplice, si è deciso di utilizzare **[Docker](https://www.docker.com/)** per poter caricare ed eseguire i diversi micro-servizi. 
+
+In particolare, si è deciso di inserire ogni micro-servizio all'interno di un apposito container Docker. Un container è una _lightweight Virtual Machine_, che è in grado di contenere un'applicazione e il suo ambiente di esecuzione, vengono considerati _lightweight_, in quanto contengono solo lo stretto necessario per poter eseguire l'applicazione e utilizzano le risorse dell'host sul quale vengono istanziati, consentendoci di avere un ambiente di esecuzione isolato per ogni servizio. 
+
+ ```dockerfile
+# Use an official Node runtime as a parent image
+FROM node:18.5.0-alpine
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the package.json and package-lock.json files to the container
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install --legacy-peer-deps
+
+# Copy the rest of the application files to the container
+COPY . .
+
+# Expose port 5173 for the application to run on
+EXPOSE 5173
+
+# Start the application
+CMD ["npm", "run", "dev"]
+ ```
+
+I diversi container sono in grado di comunicare tra loro tramite una rete costruita ad-hoc; per semplicità di gestione la costruzione dei container e della rete è stata realizzata tramite la scrittura di un apposito file ``actions.yaml``. All'interno di ogni file ogni servizio viene identificato dallo stesso nome usato per la creazione della propria immagine.
+
+```yaml
+docker:
+    name: Docker
+    runs-on: ubuntu-latest
+    needs: sonarcloud
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          tags: leledallas/tracker-ui:latest
+```
+
