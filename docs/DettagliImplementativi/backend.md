@@ -16,16 +16,83 @@ Di seguito sono riportati i dettagli implementativi del sistema di backend.
 ## Gateway
 
 
-Il servizio Gateway è composto da un server Express che funge da gateway per inoltrare le richieste a diversi servizi backend. Attraverso la libreria ``dotenv`` vengono gestite le variabili d'ambiente. Tramite ``cors`` vengono abilitate le richieste ``cross-origin`` e con ``http-proxy-middleware`` si genera il middleware di proxy.
+Il servizio Gateway è un componente essenziale all'interno di un'architettura a microservizi.
+Svolge il ruolo di intermediario tra l'applicazione client e i diversi servizi backend. 
+Il servizio Gateway viene implementato utilizzando `Express.js` e sfruttando il concetto di proxy per inoltrare le richieste ai servizi appropriati.
+Per la sua realizzazione, sono state utilizzate le seguenti librerie:
 
-Le `route` dei servizi backend vengono definite all'interno di una mappa, associando ciascuna rotta all'URL del corrispondente servizio. Il numero di porta del server viene letto dalla variabile d'ambiente ``PORT`` mentre quello relativo agli altri servizi in ``NAME_SERVICE``.
+- ``dotenv`` vengono gestite le variabili d'ambiente.
+- ``cors`` vengono abilitate le richieste ``cross-origin``;
+- ``http-proxy-middleware`` si genera il middleware di proxy.
 
-Viene creato un'app Express, a cui vengono applicati i middleware cors per consentire le richieste cross-origin e express.json() per analizzare il corpo delle richieste JSON.
+Le `route` dei servizi backend vengono definite all'interno di una mappa, associando ciascuna rotta all'URL del corrispondente servizio. 
 
-Per ogni `route` definita nella mappa, viene creato un middleware di proxy utilizzando createProxyMiddleware. Questo middleware inoltra le richieste alla URL del servizio backend corrispondente, specificata come target del proxy. Viene inoltre gestita la manipolazione del percorso delle richieste mediante la funzione ``pathRewrite``.
+Dopo aver letto la porta del server dalla variabile d'ambiente `PORT`, viene creato un'app Express e vengono applicati i middleware cors e express.json(). 
+Il middleware cors consente le richieste cross-origin, mentre express.json() permette di analizzare il corpo delle richieste JSON in arrivo.
+
+Per ogni `route` definita nella mappa, viene creato un middleware di proxy utilizzando `createProxyMiddleware`. Questo middleware inoltra le richieste alla URL del servizio backend corrispondente, specificata come target del proxy.
+Viene inoltre gestita la manipolazione del percorso delle richieste mediante la funzione ``pathRewrite``.
 Se la richiesta è di tipo POST o PUT e contiene un corpo, viene serializzato in JSON e inviato al servizio backend tramite il middleware di proxy.
 
-Infine, il server Express viene avviato sulla porta specificata e viene visualizzato un messaggio di conferma.
+Di seguito il codice prodotto per il servizio gateway
+
+``` ts
+import express from 'express';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import { createProxyMiddleware } from 'http-proxy-middleware';
+
+dotenv.config();
+
+const routes = new Map<string, any>()
+routes.set("users", process.env.USER_SERVICE)
+routes.set("buildings", process.env.BUILDINGS_SERVICE)
+routes.set("bills", process.env.BILLS_SERVICE)
+routes.set("renewable", process.env.RENEWABLE_SERVICE)
+routes.set("organization", process.env.ORGANIZATION_SERVICE)
+routes.set("activity", process.env.ACTIVITY_SERVICE)
+routes.set("preference", process.env.PREFERENCE_SERVICE)
+
+const port = process.env.PORT;
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+routes.forEach((service_port: any, route: string) => {
+  console.log(`/api/${route}`, `http://localhost:${service_port}`)
+  app.use(
+    `/api/${route}`,
+    createProxyMiddleware({
+      target: `http://localhost:${service_port}`,
+      changeOrigin: true,
+      secure: false,
+      pathRewrite: function (path, req) { return path.replace(`/api/${route}`, '') },
+      onProxyReq: (proxyReq, req, res) => {
+        if ((req.method == "POST" || req.method == "PUT") && req.body) {
+          let body = req.body;
+          let newBody = '';
+          delete req.body;
+
+          try {
+            newBody = JSON.stringify(body);
+            proxyReq.setHeader('content-length', Buffer.byteLength(newBody, 'utf8'));
+            proxyReq.write(newBody);
+            proxyReq.end();
+          } catch (e) {
+            console.log('Stringify err', e)
+          }
+        }
+      },
+    })
+  );
+})
+
+app.listen(port, () => console.info(`tracker-gateway is running`));
+
+export default app
+```
+
 
 ## Microservices
 
